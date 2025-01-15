@@ -1,5 +1,7 @@
 function player_centre(){
     // move player to middle of screen
+    player_position_left = ($(window).width() - $("#player").width()) / 2;
+    player_position_top = ($(window).height() - $("#player").height()) / 2;
     player.css("margin-left", player_position_left);
     player.css("margin-top", player_position_top);
 }
@@ -10,9 +12,8 @@ function rotate(object, degree){
 $(document).ready(function(){
     // set variables
     player = $("#player");
-    player_position_left = ($(window).width() - $("#player").width()) / 2;
-    player_position_top = ($(window).height() - $("#player").height()) / 2;
     // positioning player
+    player_centre();
     // mouse
     $(document).mousemove(function(event) {
         player_centre();
