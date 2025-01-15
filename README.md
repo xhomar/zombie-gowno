@@ -14,7 +14,7 @@ toDo list std::
 
 (2.gracz)
 (-kamera śledząca gracza)
-(-bronie (dużo)
+(-bronie dużo
 *shotgun
 *ak-49
 *katana
