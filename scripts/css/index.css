@@ -1,0 +1,19 @@
+body{
+    
+
+}
+
+h1#gameName{
+    display: block;
+    margin: auto;
+    width: 100%;
+
+
+}
+
+section#gameNameSection{
+    display: block;
+    margin: auto;
+    width: 100%;
+
+}
