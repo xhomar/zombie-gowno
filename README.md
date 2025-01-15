@@ -6,6 +6,9 @@ gameplay:
 - zombie
 - wiecej zombie
 
+![konceptart2](https://github.com/xhomar/zombie-gowno/blob/main/gra_aconcepr_art.png?raw=true)
+
+
 toDo list std::
 
 (1.mapa
