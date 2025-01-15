@@ -13,7 +13,7 @@ toDo list std::
 
 (1.mapa
 -las)
-![konceptart](https://github.com/xhomar/zombie-gowno/blob/main/mapa%20concept%20art.png?raw=true)
+![konceptart](https://github.com/xhomar/zombie-gowno/blob/main/mapa_concept_art.png?raw=true)
 
 
 (2.gracz)
