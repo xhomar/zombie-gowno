@@ -1,19 +1,63 @@
-body{
-    
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url("../../mapa_concept_art.png");
 
 }
 
-h1#gameName{
-    display: block;
-    margin: auto;
-    width: 100%;
+.vertical{
+    margin: 0;
+  position:relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+}
+
+a#start{
+    text-decoration: none;
+
+}
+
+h1#gameName {
+    width: 50%;
+    max-width: fit-content;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    height: 10vh;
+    font-size: 8vh;
+    background-color: rgb(143, 143, 143, 0.5);
+    vertical-align:middle;
 
 
 }
 
-section#gameNameSection{
+.horizontal{
+    text-align: center;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+section#buttons{
+    width: 100%;
+    height: 30vh;
     display: block;
     margin: auto;
+
+}
+
+section#gameNameSection {
     width: 100%;
+    height: 30vh;
+    display: block;
+    margin: auto;
+
 
 }
