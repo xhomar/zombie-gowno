@@ -1,3 +1,7 @@
 body {
     background-color: green;
 }
+
+img#player {
+    width: 10%;
+}
