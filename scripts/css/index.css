@@ -4,7 +4,7 @@ body {
     padding: 0px;
     margin: 0px;
     background-image: url("../../assets/backgrounds/backgroundIndex.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: 100%;
 
 }
