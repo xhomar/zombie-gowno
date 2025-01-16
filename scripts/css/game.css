@@ -1,7 +1,10 @@
 body {
     background-color: green;
 }
+img {
+    position: absolute;
+}
 
-img#player {
+img.player {
     width: 10%;
 }
