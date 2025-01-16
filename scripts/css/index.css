@@ -1,4 +1,10 @@
 /*i need to fix these widths fucks thingies (IMPORTANR!!!!!)*/
+/*
+    I fucked up something in your code
+    now honestly I just want to go to sleep
+    good night
+    Dave 16.01 23:25
+*/
 
 body {
     padding: 0px;
@@ -30,14 +36,10 @@ a#start {
 }
 
 h1#gameName {
-    width: 100%;
-    max-width: fit-content;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px;
-    height: 20vh;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    max-height: 20vh;
     font-size: 20vh;
     vertical-align:middle;
     color:white;
