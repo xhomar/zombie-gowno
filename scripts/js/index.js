@@ -3,28 +3,39 @@ let popSound;
 
 $(document).ready(function () {
   const startSection = $("#startSection");
-  const settingsSection = $("#settingsSection")
+  const settingsSection = $("#settingsSection");
   const nameForm = $("#nameForm");
   const back = $("#back");
    const settings = $("#settings");
    const start = $("#start");
-   const allButtons = $("#allButtons")
+   const allButtons = $("#allButtons");
    const buttons = $(".buttons");
    const horizontal = $(".horizontal");
    const colorSection = $("#colorSection");
    const backSection = $("#backSection");
+   const soundSection = $("#soundSection");
+   const soundLeveljq = $("#soundLevel");
+   const volumeIcon = $("#volumeIcon");
+   const background = $("#background");
+   const soundLevel = document.getElementById("soundLevel");
    popSound = document.getElementById("popSound");
 
-   colorSection.fadeOut(5); 
-   backSection.fadeOut(5); // i'm too lazy to actually do this right so it just fades out at the start
+   let isHeld = false;
 
-  popSound.volume = "0.1"; // changes the volume of popSound cause it's loud as fuck
+   colorSection.fadeOut(0); 
+   soundLeveljq.fadeOut(0);
+   volumeIcon.fadeOut(0)
+   backSection.fadeOut(0); // i'm too lazy to actually do this right so it just fades out at the start
+
+  popSound.volume = soundLevel.value/100; // changes the volume of pop sound cause it's loud as fuck
 
   // clicking settings button -> fades out some buttons and fades in the others
   settings.on("click", function () {
     nameForm.fadeOut(300);
     settingsSection.fadeOut(300);
     startSection.fadeOut(300);
+    backSection.fadeOut(300);
+    volumeIcon.fadeIn(300);
     colorSection.fadeIn(300);
     backSection.fadeIn(300);
     
@@ -34,6 +45,7 @@ $(document).ready(function () {
   back.on("click", function () {
     colorSection.fadeOut(300);
     backSection.fadeOut(300);
+    volumeIcon.fadeOut(200)
     startSection.fadeIn(300);
     nameForm.fadeIn(300);
     settingsSection.fadeIn(300);
@@ -51,4 +63,48 @@ $(document).ready(function () {
   start.on("click", function () {
     window.location.href = "../html/game.html"; // goes to game.html
   });
+
+// I fucking hate the code below please help my soul o7
+
+  volumeIcon.on("mouseover", function(){
+  
+    soundLeveljq.fadeIn(500);
+  back.animate({marginLeft: "13vmin"}, 300);
+
+  if(!isHeld){
+    isHeld=true;
+    
+      }
+
+
+  });
+
+  soundLeveljq.on("mouseover", function(){
+    soundLeveljq.fadeIn(500);
+  back.animate({marginLeft: "13vmin"}, 300);
+  if(!isHeld){
+isHeld=true;
+
+  }
+
+  });
+
+  volumeIcon.on("mouseout", function(){
+    soundLeveljq.fadeOut(200);
+    back.animate({marginLeft: "0vmin"}, 300);
+
+  });
+
+  soundLeveljq.on("mouseout", function(){
+    soundLeveljq.fadeOut(200);
+    back.animate({marginLeft: "0vmin"}, 300);
+
+  });
+
+  
+
+
+  
+
 });
+

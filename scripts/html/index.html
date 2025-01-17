@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+<div style="position: fixed; width: 100vw; height: 100vh; z-index: -1;" id="background"></div>
     <section id="gameNameSection">
         <h1 id="gameName" class="vertical">Zombie gówno</h1>
 
@@ -42,7 +42,10 @@
             <div class="buttons" id="colors">Colors</div>
         </section>
 
-
+        <section id="soundSection">
+            <input type="range" min="0" max="100" id="soundLevel">
+            <img src="../../assets/icons/volume.png" id="volumeIcon" width="50vmin">
+        </section>
 
         <section id="backSection">
             <div class="buttons" id="back">Back</div>
