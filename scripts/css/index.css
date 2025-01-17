@@ -88,8 +88,8 @@ div#back{
 div#colors{
     font-size: 5vmin;
     background-color: rgba(143, 143, 143, 0.5);
-    height: 15vmin;
-    width: 30vmin;
+    height: 23vmin;
+    width: 60vmin;
     user-select: none;
 
 }
@@ -144,7 +144,7 @@ section#allButtons {
 }
 
 section#colorSection{
-    opacity: 0;
+    position: fixed;
     width: 100%;
     height: 20vmin;
     display: flex;
@@ -153,7 +153,9 @@ section#colorSection{
 }
 
 section#backSection{
-    opacity: 0;
+    position: fixed;
+    padding-left: 15vmin;
+    padding-top: 24vmin;
     width: 100%;
     height: 20vmin;
     display: flex;
@@ -182,7 +184,7 @@ section#settingsSection{
     width: 100%;
     height: 10vmin;
     float: left;
-
+    
     margin-left: 15vmin;
     margin-top: 2vmin;
 }

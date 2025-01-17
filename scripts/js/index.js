@@ -14,7 +14,8 @@ $(document).ready(function () {
    const backSection = $("#backSection");
 
    popSound = document.getElementById("popSound");
-  
+   colorSection.fadeOut(5);
+   backSection.fadeOut(5);
   popSound.volume = "0.1";
   settings.on("click", function () {
     nameForm.fadeOut(300);
@@ -22,6 +23,7 @@ $(document).ready(function () {
     startSection.fadeOut(300);
     colorSection.fadeIn(300);
     backSection.fadeIn(300);
+    
   });
 
   start.on("click", function () {
