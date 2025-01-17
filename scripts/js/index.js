@@ -40,13 +40,15 @@ $(document).ready(function () {
     
   });
 
+  // clicking button -> plays pop sound (omg good coding)
+  buttons.on("click", function(){
+    popSound.currentTime = 0; // Restarts the sound
+    popSound.play(); // Plays the sound
+
+});
+
   // clicking start button -> sends to game.html
   start.on("click", function () {
     window.location.href = "../html/game.html"; // goes to game.html
-  });
-
-  buttons.on("mouseover", function () {
-    popSound.currentTime = 0; // Restarts the sound
-    popSound.play(); // Plays the sound
   });
 });
