@@ -1,6 +1,12 @@
 
 let popSound;
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+} // waiting function
+
+
+
 $(document).ready(function () {
   const startSection = $("#startSection");
   const settingsSection = $("#settingsSection");
@@ -64,7 +70,9 @@ $(document).ready(function () {
     window.location.href = "../html/game.html"; // goes to game.html
   });
 
-// I fucking hate the code below please help my soul o7
+// I FIXED THIS TRASH DSADEWRTHY^%WREFD
+
+//the code below basically checks when something is mouse overed (volume Icon) and then shows the volume meter to change volume
 
   volumeIcon.on("mouseover", function(){
   
@@ -89,15 +97,26 @@ isHeld=true;
 
   });
 
-  volumeIcon.on("mouseout", function(){
-    soundLeveljq.fadeOut(200);
-    back.animate({marginLeft: "0vmin"}, 300);
+   volumeIcon.on("mouseout", async function(){
+    isHeld=false;
+    await sleep(100); // goes afk for 100ms
+    if(!isHeld){
+      soundLeveljq.fadeOut(200);
+      back.animate({marginLeft: "0vmin"}, 300);
+
+    }
+    
 
   });
 
-  soundLeveljq.on("mouseout", function(){
-    soundLeveljq.fadeOut(200);
-    back.animate({marginLeft: "0vmin"}, 300);
+  soundLeveljq.on("mouseout", async function(){
+    isHeld=false;
+    await sleep(100); // goes afk for 100ms
+    if(!isHeld){ //if the button is still not held the bar thingy disappears
+      soundLeveljq.fadeOut(200);
+      back.animate({marginLeft: "0vmin"}, 300);
+
+    }
 
   });
 
@@ -107,4 +126,6 @@ isHeld=true;
   
 
 });
+
+
 
