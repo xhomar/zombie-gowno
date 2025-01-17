@@ -1,13 +1,17 @@
 $(document).ready(function () {
   const settings = $("#settings");
   const start = $("#start");
+  const allButtons = $("#allButtons")
   const buttons = $(".buttons");
   const horizontal = $(".horizontal");
+
   const popSound = document.getElementById("popSound");
 
   popSound.volume = "0.1";
   settings.on("click", function () {
-    // not gonna do this crap
+    console.log("test");
+    allButtons.fadeOut(300);
+    
   });
 
   start.on("click", function () {
