@@ -115,14 +115,12 @@ div#settings {
 
 }
 
-div#settings:hover {
-    background-color: rgba(117, 117, 117, 0.5);
-    cursor: pointer;
-}
 
-div#start:hover {
-    background-color: rgba(117, 117, 117, 0.5);
+
+.buttons:hover{
+    background-color: rgba(117, 117, 117, 0.5) !important;
     cursor: pointer;
+
 }
 
 /*div*/

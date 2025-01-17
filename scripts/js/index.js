@@ -5,6 +5,7 @@ $(document).ready(function () {
   const startSection = $("#startSection");
   const settingsSection = $("#settingsSection")
   const nameForm = $("#nameForm");
+  const back = $("#back");
    const settings = $("#settings");
    const start = $("#start");
    const allButtons = $("#allButtons")
@@ -23,6 +24,15 @@ $(document).ready(function () {
     startSection.fadeOut(300);
     colorSection.fadeIn(300);
     backSection.fadeIn(300);
+    
+  });
+
+  back.on("click", function () {
+    colorSection.fadeOut(300);
+    backSection.fadeOut(300);
+    startSection.fadeIn(300);
+    nameForm.fadeIn(300);
+    settingsSection.fadeIn(300);
     
   });
 
