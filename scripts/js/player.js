@@ -1,25 +1,4 @@
-function player_centre(){
-    // move player to middle of screen
-
-    // calculate player's pos
-    head_position_left = ($(window).width() - head.width()) / 2;
-    head_position_top = ($(window).height() - head.height()) / 2;
-    weapon_position_left = ($(window).width() - weapon.width()) / 2;
-    weapon_position_top = ($(window).height() - weapon.height()) / 2;
-    // rotate
-    head.css("left", head_position_left);
-    head.css("top", head_position_top);
-    weapon.css("left", weapon_position_left);
-    weapon.css("top", weapon_position_top);
-}
-function rotate(object, degree){
-    // rotate object to degree
-    object.css("transform", "rotate(" + degree + "deg)");
-}
-function move(position, amount){
-    position += amount;
-    console.log(player_position.x, player_position.y)
-}
+let key;
 
 $(document).ready(function(){
     // set variables
@@ -44,18 +23,40 @@ $(document).ready(function(){
         rotate(head, -degree);
         rotate(weapon, -degree);
     });
-    $(document).keydown(function (key) { 
-        if (key = "W"){
-            move(player_position.x, 1);
+    // key down
+    $(document).keydown(function (event) { 
+        // FIX LATER
+        key = event.key;
+        if (key == "w"){
+            player_position.x += 1;
         }
-        if (key = "S"){
-            move(player_position.x, -1);
+        if (key == "s"){
+            player_position.x -= 1;
         }
-        if (key = "A"){
-            move(player_position.y, -1);
+        if (key == "a"){
+            player_position.y -= 1;
         }
-        if (key = "D"){
-            move(player_position.y, 1);
+        if (key == "d"){
+            player_position.y += 1;
         }
     });
   });
+
+function player_centre(){
+    // move player to middle of screen
+
+    // calculate player's pos
+    head_position_left = ($(window).width() - head.width()) / 2;
+    head_position_top = ($(window).height() - head.height()) / 2;
+    weapon_position_left = ($(window).width() - weapon.width()) / 2;
+    weapon_position_top = ($(window).height() - weapon.height()) / 2;
+    // rotate
+    head.css("left", head_position_left);
+    head.css("top", head_position_top);
+    weapon.css("left", weapon_position_left);
+    weapon.css("top", weapon_position_top);
+}
+function rotate(object, degree){
+    // rotate object to degree
+    object.css("transform", "rotate(" + degree + "deg)");
+}
