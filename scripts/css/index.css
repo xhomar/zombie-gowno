@@ -1,4 +1,3 @@
-/*i need to fix these widths fucks thingies (IMPORTANR!!!!!)*/
 /*
     I fucked up something in your code
     now honestly I just want to go to sleep
@@ -6,7 +5,7 @@
     Dave 16.01 23:25
 */
 
-
+/*body*/
 body {
     padding: 0px;
     margin: 0px;
@@ -17,59 +16,107 @@ body {
 
 }
 
-
-.vertical{
-  margin: 0;
-  position:relative;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+/*body*/
 
 
+
+/*classes*/
+.vertical {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
-   
-a#start {
-    text-decoration: none;
-    font-size: 5vmin;
-    background-color: rgba(143, 143, 143, 0.5); /* Optional background */
-    color: white; /* Adjust text color */
-    border-radius: 10px; /*rounded corners */
+
+.horizontal {
     text-align: center;
-    height: 15vmin;
-    width: 30vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
+.buttons{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    color: white;
 
+    border-radius: 10px;
+    margin: 0;
+    
+    
+}
+
+/*classes*/
+
+
+
+/*H1*/
 h1#gameName {
     text-align: center;
     margin: 0 auto;
     padding: 0;
     max-height: 20vmin;
     font-size: 10vw;
-    vertical-align:middle;
-    color:white;
+    vertical-align: middle;
+    color: white;
     text-shadow: 0px 2px 10px black;
-
+    user-select: none;
 
 }
 
+/*H1*/
 
-.horizontal {
-    text-align: center;
-    display: flex;
-    justify-content: center; /* Center the link horizontally */
-    align-items: center;    /* Center the link vertically if needed */
-    height: 100%;           /* Make it fill the section */
+
+
+
+/*div*/
+div#start {
+    
+    font-size: 5vmin;
+    background-color: rgba(143, 143, 143, 0.5);
+    height: 15vmin;
+    width: 30vmin;
+    user-select: none;  
 }
 
+div#settings {
 
-section#buttons {
+    
+    font-size: 5vmin;
+    background-color: rgba(143, 143, 143, 0.5);
+    height: 10vmin;
+    width: 30vmin;
+    user-select: none;
+    
+
+}
+
+div#settings:hover {
+    background-color: rgba(117, 117, 117, 0.5);
+    cursor: pointer;
+}
+
+div#start:hover {
+    background-color: rgba(117, 117, 117, 0.5);
+    cursor: pointer;
+}
+
+/*div*/
+
+
+
+
+/*section*/
+section#allButtons {
     width: 50%;
     height: 30vmin;
     background-color: white;
-    display: flex; /* Use flexbox to center the content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex;
     margin: auto;
     text-shadow: 0px 2px 10px rgb(129, 129, 129);
     box-shadow: 0px 10px 0px rgb(147, 147, 147);
@@ -79,8 +126,58 @@ section#buttons {
 section#gameNameSection {
     width: 100%;
     height: 20vmin;
-    display: block;
+    display: flex;
     margin: auto;
     margin-bottom: 10vmax;
 }
 
+section#startSection{
+    width: 100%;
+    height: 15vmin;
+    float: left;
+}
+
+section#settingsSection{
+    width: 100%;
+    height: 10vmin;
+    float: left;
+}
+
+
+
+
+/*section*/
+
+/*audio*/
+
+audio#popSound{
+display: none;
+
+}
+
+/*audio*/
+
+/*input*/
+
+input#name {
+    font-size: 3vmin;
+    margin: 0.5vmin;
+    width: 25vmin;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+/*input*/
+
+/*form*/
+form#nameForm{
+    width: 100%;
+    height: 5vmin;
+    text-align: center;
+    margin-bottom: 2vmin;
+    float: left;
+}
+
+/*form*/

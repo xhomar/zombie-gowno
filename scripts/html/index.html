@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <title>Zombie Gówno</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/index.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="../js/index.js"></script>
+
+<head>
+    <title>Zombie Gówno</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+
+</head>
+
+<body>
+    <section id="gameNameSection">
+        <h1 id="gameName" class="vertical">Zombie gówno</h1>
+
+    </section>
+
+    <section id="allButtons">
         
-    </head>
-    <body>
-        <section id="gameNameSection">
-            <h1 id="gameName" class="vertical">Zombie gówno</h1>
-
+        <section id="startSection">
+            <div class="buttons" id="start">Start</div>
         </section>
 
-        <section id="buttons">
-            
-            <a href="game.html" class="horizontal" id="start">Start</a>
+        <form id="nameForm">
+            <input type="text" maxlength="10" id="name" placeholder="Your name">
+        </form>
+
+        <section id="settingsSection">
+            <div class="buttons" id="settings">Settings</div>
         </section>
-    </body>
+
+        <audio id="popSound" src="../../sounds/sfx/popSound.mp3"></audio>
+    </section>
+
+
+</body>
+
 </html>
