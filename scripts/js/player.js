@@ -27,17 +27,19 @@ $(document).ready(function(){
     $(document).keydown(function (event) { 
         // FIX LATER
         key = event.key;
+
+        //checks what key was pressed and changes x and y
         if (key == "w"){
-            player_position.x += 1;
+            player_position.x += 1; //x+1
         }
         if (key == "s"){
-            player_position.x -= 1;
+            player_position.x -= 1; //x-1
         }
         if (key == "a"){
-            player_position.y -= 1;
+            player_position.y -= 1; //y-1
         }
         if (key == "d"){
-            player_position.y += 1;
+            player_position.y += 1; //y+1
         }
     });
   });

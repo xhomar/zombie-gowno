@@ -88,9 +88,10 @@ div#back{
 div#colors{
     font-size: 5vmin;
     background-color: rgba(143, 143, 143, 0.5);
-    height: 23vmin;
+    height: 22vmin;
     width: 60vmin;
     user-select: none;
+    border-radius: 10px 10px 0px 0px;
 
 }
 
@@ -136,9 +137,10 @@ section#allButtons {
     display: flex;
     flex-direction: column;
     margin: auto;
+    border: 3px solid rgb(147, 147, 147);
     text-shadow: 0px 2px 10px rgb(129, 129, 129);
     box-shadow: 0px 10px 0px rgb(147, 147, 147);
-    border-radius: 10px;
+    border-radius: 15px;
     
 }
 
