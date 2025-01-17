@@ -1,3 +1,9 @@
+/*
+IMPORTANT!!!!
+
+use pull before you code anything!!!!
+*/ 
+
 let key;
 
 $(document).ready(function(){
