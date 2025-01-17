@@ -1,17 +1,25 @@
+
+let popSound;
+
 $(document).ready(function () {
-  const settings = $("#settings");
-  const start = $("#start");
-  const allButtons = $("#allButtons")
-  const buttons = $(".buttons");
-  const horizontal = $(".horizontal");
+  const nameForm = $("#nameForm");
+   const settings = $("#settings");
+   const start = $("#start");
+   const allButtons = $("#allButtons")
+   const buttons = $(".buttons");
+   const horizontal = $(".horizontal");
+   const colorSection = $("#colorSection");
+   const backSection = $("#backSection");
 
-  const popSound = document.getElementById("popSound");
-
+   popSound = document.getElementById("popSound");
+  
   popSound.volume = "0.1";
   settings.on("click", function () {
-    console.log("test");
-    allButtons.fadeOut(300);
-    
+    nameForm.fadeOut(300);
+    settings.fadeOut(300);
+    start.fadeOut(300);
+    colorSection.fadeIn(300);
+    backSection.fadeIn(300);
   });
 
   start.on("click", function () {
