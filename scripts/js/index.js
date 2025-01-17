@@ -2,6 +2,8 @@
 let popSound;
 
 $(document).ready(function () {
+  const startSection = $("#startSection");
+  const settingsSection = $("#settingsSection")
   const nameForm = $("#nameForm");
    const settings = $("#settings");
    const start = $("#start");
@@ -16,8 +18,8 @@ $(document).ready(function () {
   popSound.volume = "0.1";
   settings.on("click", function () {
     nameForm.fadeOut(300);
-    settings.fadeOut(300);
-    start.fadeOut(300);
+    settingsSection.fadeOut(300);
+    startSection.fadeOut(300);
     colorSection.fadeIn(300);
     backSection.fadeIn(300);
   });
