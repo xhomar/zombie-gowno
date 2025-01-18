@@ -28,6 +28,11 @@ $(document).ready(function () {
 
    let isHeld = false;
    let prevSoundLvl;
+
+   soundLevel.value = 20;
+   popSound.volume = soundLevel.value/100; // changes the volume of pop sound cause it's loud as fuck
+
+
    colorSection.fadeOut(0); 
    soundLeveljq.fadeOut(0);
    volumeIcon.fadeOut(0)
@@ -70,6 +75,7 @@ $(document).ready(function () {
     window.location.href = "../html/game.html"; // goes to game.html
   });
 
+  // clicking volume icon -> depending on what the volume is it changes the volume to 0 or to the previous volume
   volumeIcon.on("click", function(){
     if(soundLevel.value!=0){
       prevSoundLvl = soundLevel.value;
@@ -116,7 +122,7 @@ isHeld=true;
 
    volumeIcon.on("mouseout", async function(){
     isHeld=false;
-    await sleep(200); // goes afk for 100ms
+    await sleep(200); // goes afk for 200ms
     if(!isHeld){
       soundLeveljq.fadeOut(200);
       back.animate({marginLeft: "0vmin"}, 300);
@@ -128,7 +134,7 @@ isHeld=true;
 
   soundLeveljq.on("mouseout", async function(){
     isHeld=false;
-    await sleep(200); // goes afk for 100ms
+    await sleep(200); // goes afk for 200ms
     if(!isHeld){ //if the button is still not held the bar thingy disappears
       soundLeveljq.fadeOut(200);
       back.animate({marginLeft: "0vmin"}, 300);
