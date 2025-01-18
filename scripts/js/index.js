@@ -116,7 +116,7 @@ isHeld=true;
 
    volumeIcon.on("mouseout", async function(){
     isHeld=false;
-    await sleep(100); // goes afk for 100ms
+    await sleep(200); // goes afk for 100ms
     if(!isHeld){
       soundLeveljq.fadeOut(200);
       back.animate({marginLeft: "0vmin"}, 300);
@@ -128,7 +128,7 @@ isHeld=true;
 
   soundLeveljq.on("mouseout", async function(){
     isHeld=false;
-    await sleep(100); // goes afk for 100ms
+    await sleep(200); // goes afk for 100ms
     if(!isHeld){ //if the button is still not held the bar thingy disappears
       soundLeveljq.fadeOut(200);
       back.animate({marginLeft: "0vmin"}, 300);
