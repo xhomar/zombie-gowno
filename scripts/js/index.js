@@ -27,13 +27,13 @@ $(document).ready(function () {
    popSound = document.getElementById("popSound");
 
    let isHeld = false;
-
+   let prevSoundLvl;
    colorSection.fadeOut(0); 
    soundLeveljq.fadeOut(0);
    volumeIcon.fadeOut(0)
    backSection.fadeOut(0); // i'm too lazy to actually do this right so it just fades out at the start
 
-  popSound.volume = soundLevel.value/100; // changes the volume of pop sound cause it's loud as fuck
+  
 
   // clicking settings button -> fades out some buttons and fades in the others
   settings.on("click", function () {
@@ -70,6 +70,24 @@ $(document).ready(function () {
     window.location.href = "../html/game.html"; // goes to game.html
   });
 
+  volumeIcon.on("click", function(){
+    if(soundLevel.value!=0){
+      prevSoundLvl = soundLevel.value;
+      soundLevel.value = 0;
+      popSound.volume = soundLevel.value/100; // changes the volume of pop sound cause it's loud as fuck
+    }else{
+      soundLevel.value = prevSoundLvl;
+      popSound.volume = soundLevel.value/100;
+    }
+    
+    
+  });
+
+  soundLeveljq.on("change", function(){
+    popSound.volume = soundLevel.value/100;
+
+  })
+
 // I FIXED THIS TRASH DSADEWRTHY^%WREFD
 
 //the code below basically checks when something is mouse overed (volume Icon) and then shows the volume meter to change volume
@@ -78,7 +96,6 @@ $(document).ready(function () {
   
     soundLeveljq.fadeIn(500);
   back.animate({marginLeft: "13vmin"}, 300);
-
   if(!isHeld){
     isHeld=true;
     

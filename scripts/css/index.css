@@ -236,6 +236,11 @@ input#soundLevel{
 
 }
 
+input#soundLevel:hover{
+    cursor: pointer;
+
+}
+
 /*input*/
 
 /*form*/
@@ -251,7 +256,15 @@ form#nameForm{
 
 /*image*/
 
-image#volumeIcon{
+img#volumeIcon{
     z-index: 2;
     position: fixed;
+    
 }
+
+img#volumeIcon:hover{
+    cursor: pointer;
+}
+
+
+/*image*/
