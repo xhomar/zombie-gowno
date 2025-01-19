@@ -1,22 +1,19 @@
 /*
 IMPORTANT!!!!
 
-use pull before you code anything!!!!
+use pull before you code anything!!!! -fuck you
 */ 
-
-let key;
 
 $(document).ready(function(){
     // set variables
+    key_down_w = false, key_down_a = false, key_down_s = false, key_down_d = false;
     head = $("#head");
     weapon = $("#weapon");
     player_position = {x:0, y:0}; // PLAYER POSITION !!!!!!!!!!!!!!!!
-    key = "";
     // positioning player
-    player_centre();
+    loop();
     // mouse
     $(document).mousemove(function(event) {
-        player_centre();
         // get cursor pos
         mouse_position_top = event.pageX;
         mouse_position_left = event.pageY;
@@ -31,23 +28,62 @@ $(document).ready(function(){
     });
     // key down
     $(document).keydown(function (event) { 
-        // FIX LATER
-        key = event.key;
-
-        //checks what key was pressed and changes x and y
-        if (key == "w"){
-            player_position.x += 1; //x+1
-        }
-        if (key == "s"){
-            player_position.x -= 1; //x-1
-        }
-        if (key == "a"){
-            player_position.y -= 1; //y-1
-        }
-        if (key == "d"){
-            player_position.y += 1; //y+1
+        // checks if keys are hold down
+        switch(event.key){
+            case "w":
+                key_down_w = true;
+                break;
+            case "a":
+                key_down_a = true;
+                break;
+            case "s":
+                key_down_s = true;
+                break;
+            case "d":
+                key_down_d = true;
+                break;
         }
     });
+    // key up
+    $(document).keyup(function (event) { 
+        // checks if keys are not longer hold down
+        switch(event.key){
+            case 'w':
+                key_down_w = false;
+                break;
+            case 'a':
+                key_down_a = false;
+                break;
+            case 's':
+                key_down_s = false;
+                break;
+            case 'd':
+                key_down_d = false;
+                break;
+        }
+    });
+    function loop() {
+        // moving player to screen's centre
+        player_centre();
+        // player movement
+        if (key_down_w){
+            player_position.x += 1; //x+1
+            console.log(player_position);
+        };
+        if (key_down_a){
+            player_position.y -= 1; //y-1
+            console.log(player_position);
+        };
+        if (key_down_s){
+            player_position.x -= 1; //x-1
+            console.log(player_position);
+        };
+        if (key_down_d){
+            player_position.y += 1; //y+1
+            console.log(player_position);
+        };
+        requestAnimationFrame(loop);
+    }
   });
 
 function player_centre(){
