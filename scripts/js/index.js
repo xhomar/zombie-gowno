@@ -1,5 +1,6 @@
 
 let popSound;
+let currentPickedColor;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -8,6 +9,7 @@ function sleep(ms) {
 
 
 $(document).ready(function () {
+  const alphabet ="abcdefghijklmnopqrstuvwxyz";
   const startSection = $("#startSection");
   const settingsSection = $("#settingsSection");
   const nameForm = $("#nameForm");
@@ -23,10 +25,13 @@ $(document).ready(function () {
    const soundLeveljq = $("#soundLevel");
    const volumeIcon = $("#volumeIcon");
    const background = $("#background");
+   const colors = $(".colorsChild");
    const soundLevel = document.getElementById("soundLevel");
    popSound = document.getElementById("popSound");
 
    let isHeld = false;
+   let prevColor = "eColor";
+   currentPickedColor = $("#" + prevColor).css("background-color");
    let prevSoundLvl;
 
    soundLevel.value = 20;
@@ -65,8 +70,22 @@ $(document).ready(function () {
 
   // clicking button -> plays pop sound (omg good coding)
   buttons.on("click", function(){
+    if($(this).attr("id") != "colors"){
+
+      popSound.currentTime = 0; // Restarts the sound
+      popSound.play(); // Plays the sound
+    }
+    
+
+});
+
+colors.on("click", function(){
+
+
     popSound.currentTime = 0; // Restarts the sound
     popSound.play(); // Plays the sound
+  
+  
 
 });
 
@@ -93,6 +112,22 @@ $(document).ready(function () {
     popSound.volume = soundLevel.value/100;
 
   })
+
+  colors.on("click", function(){
+
+    let currentColor = $(this).attr("id");
+    if(currentColor!=prevColor){
+      $("#" + currentColor).css("border", "4px solid rgb(97, 255, 29)");
+      $("#"+prevColor).css("border", "");
+      prevColor = currentColor;
+      currentPickedColor = $("#" + prevColor).css("background-color");
+      console.log(currentPickedColor);
+    }else{
+
+
+    }
+    
+  });
 
 // I FIXED THIS TRASH DSADEWRTHY^%WREFD
 
