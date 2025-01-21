@@ -67,6 +67,13 @@ body {
     height: 8vmin;
     margin-left: 0.25vmin;
     position: fixed;
+    cursor: pointer;
+}
+
+.buttons:hover{
+    background-color: rgba(117, 117, 117, 0.5) !important;
+    cursor: pointer;
+
 }
 
 /*classes*/
@@ -137,11 +144,7 @@ div#settings {
 
 
 
-.buttons:hover{
-    background-color: rgba(117, 117, 117, 0.5) !important;
-    cursor: pointer;
 
-}
 
 div#colors{
     background-color: rgba(143, 143, 143, 0.5) !important;

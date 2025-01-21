@@ -1,7 +1,7 @@
 
 let popSound;
 let currentPickedColor;
-
+let currentColor;
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 } // waiting function
@@ -30,6 +30,7 @@ $(document).ready(function () {
    popSound = document.getElementById("popSound");
 
    let isHeld = false;
+   let colorChanged = false;
    let prevColor = "eColor";
    currentPickedColor = $("#" + prevColor).css("background-color");
    let prevSoundLvl;
@@ -121,13 +122,42 @@ colors.on("click", function(){
       $("#"+prevColor).css("border", "");
       prevColor = currentColor;
       currentPickedColor = $("#" + prevColor).css("background-color");
-      console.log(currentPickedColor);
+      colorChanged=true;
     }else{
 
 
     }
     
   });
+
+
+
+
+    colors.on("mouseover", function(){
+      
+      if(prevColor!=$(this).attr("id")){
+        colorChanged=false;
+        $(this).css("border", "2px solid rgb(61, 196, 4)");
+      }else{
+        colorChanged=true;
+      }
+
+    });
+
+    colors.on("mouseout", function(){
+      if(!colorChanged){
+        if(currentColor!=prevColor){
+          
+          $(this).css("border", "");
+          
+        }else{
+    
+        }
+
+      }
+      
+
+    });
 
 // I FIXED THIS TRASH DSADEWRTHY^%WREFD
 
