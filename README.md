@@ -2,7 +2,7 @@
 marijo i dave robi gre 
 
 gameplay:
-- koles ze strzelba
+- koles ze strzelba (jednak telepatycznie strzela bo jest nacpany)
 - zombie
 - wiecej zombie
 
@@ -10,11 +10,9 @@ gameplay:
 
 
 LORE
-zombie gowno lore
-gostek łysy ksiądz z krzyżem na czole naćpany i nachlany po imprezie zgubił się w lesie i urwał mu się film
-o 4:52 obudził się z mocnym kacem i apokalipsa zombie w lesie
-wziął strzelbę która zawsze nosił przy sobie i zaczął strzelać do zombie w lesie
-jest inwalida umysłowym i nie potrafi wyjść z lasu, więzień leśny Adam Mickiewicz uwięziony w własnym umyśle człowiek zdruzgotany
+
+gosc jest po narkotykach, tak? koniec
+
 
 toDo list std::
 
@@ -24,20 +22,22 @@ toDo list std::
 
 
 (2.gracz)
-(-kamera śledząca gracza)
-(-bronie dużo
-*shotgun
-*ak-49
-*katana
-*deagle
-*snajperka
-*granat launcher)
+(-kamera śledząca gracza) NIEZROBIONE
+(-bronie dużoNIEZROBIONE
+*shotgunNIEZROBIONE
+*ak-49NIEZROBIONE
+*katanaNIEZROBIONE
+*deagleNIEZROBIONE
+*snajperkaNIEZROBIONE
+*granat launcherNIEZROBIONE)
 
 
 
 (3.zombie
--tank
--strzelający debil
--bezmyślny debil
--speedy boi
--Mariusz Kwiatkowski)
+-tankNIEZROBIONE
+-strzelający debilNIEZROBIONE
+-bezmyślny debil OK
+-speedy boi OK
+-Mariusz Kwiatkowski OK)
+
+w sumie jest tylko jeden typ zombie ale 3 typy zombie sie zaliczaja w jedem tak?

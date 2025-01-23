@@ -13,7 +13,9 @@ $(document).ready(function () {
     mouse_position = { x: 0, y: 0 };
     window.head_position = { x: 0, y: 0 };
     weapon_position = { x: 0, y: 0 };
-    // positioning player
+    nowy = true;
+    // moving player to screen's centre
+    player_centre();
     loop();
     // mouse
     $(document).mousemove(function (event) {
@@ -21,7 +23,7 @@ $(document).ready(function () {
         mouse_position.y = event.pageX;
         mouse_position.x = event.pageY;
         // count degree from xy(0,0) to cursor pos
-        degree = (Math.atan2((mouse_position.y - ($(window).width() / 2)), (mouse_position.x - ($(window).height()) / 2))) * (180 / Math.PI);
+        degree = Math.atan2((mouse_position.y - window.head_position.x), (mouse_position.x - window.head_position.y)) * (180 / Math.PI);
         if (degree < 0) {
             degree += 360;
         }
@@ -37,9 +39,6 @@ $(document).ready(function () {
         window.head_position.y = ($(window).height() - head.height()) / 2;
         weapon_position.x = ($(window).width() - weapon.width()) / 2;
         weapon_position.y = ($(window).height() - weapon.height()) / 2;
-        // rotate
-        head.css({"left": window.head_position.x, "top": window.head_position.y});
-        weapon.css({"left": weapon_position.x, "top": weapon_position.y});
     }
     function rotate(object, degree) {
         // rotate object to degree
@@ -48,6 +47,11 @@ $(document).ready(function () {
     // key down
     $(document).keydown(function (event) {
         // checks if keys are hold down
+        if(nowy){
+            nowy=false;
+            const sound = new Audio("../../sounds/wlecomtozombiegowno.m4a");
+            sound.play();
+        }
         switch (event.key) {
             case "w":
                 key_down_w = true;
@@ -81,30 +85,28 @@ $(document).ready(function () {
                 break;
         }
     });
+    kurwa_speed = 3;
     function loop() {
-        // moving player to screen's centre
-        player_centre();
         // player movement
         if (key_down_w) {
-            window.player_position.x += 1; //x+1
-            console.clear();
-            console.log(window.player_position);
+            window.head_position.y -= kurwa_speed; //x+1
+            weapon_position.y -= kurwa_speed;
         };
         if (key_down_a) {
-            window.player_position.y -= 1; //y-1
-            console.clear();
-            console.log(window.player_position);
+            window.head_position.x -= kurwa_speed; //y-1
+            weapon_position.x -= kurwa_speed;
         };
         if (key_down_s) {
-            window.player_position.x -= 1; //x-1
-            console.clear();
-            console.log(window.player_position);
+            window.head_position.y += kurwa_speed; //x-1
+            weapon_position.y += kurwa_speed;
         };
         if (key_down_d) {
-            window.player_position.y += 1; //y+1
-            console.clear();
-            console.log(window.player_position);
+            window.head_position.x += kurwa_speed; //y+1
+            weapon_position.x += kurwa_speed;
         };
+        // wtf its not rotate????
+        head.css({"left": window.head_position.x, "top": window.head_position.y});
+        weapon.css({"left": weapon_position.x, "top": weapon_position.y});
         requestAnimationFrame(loop);
     };
 });

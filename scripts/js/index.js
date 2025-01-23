@@ -6,7 +6,10 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 } // waiting function
 
+// TY ZDAJESZ SOBIE KURWA SPRAWE ŻE NIE WIEM CO TU ROBIĄ ZMIENNIE
+// I NIE WIEM GDZIE KURWA ZNALEŹĆ KOLOR GRACZA LUB NICK ŻEBY GO ZAIMPLEMENTOWAĆ W INFNNFSNAFASFJNASEDOHFUIJAEHFJKSEHFGUJISHEUIGSI
 
+//KURUWAWDAAAA TO MA 200 LINIJEK KODU MARIUSZ
 
 $(document).ready(function () {
   const alphabet ="abcdefghijklmnopqrstuvwxyz";
