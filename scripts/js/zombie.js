@@ -10,6 +10,7 @@ $(document).ready(function () {
     $("body").append(pointsDisplay);
     pointsDisplay.css({
         position: "absolute",
+        draggable: "false",
         top: "0",
         left: "0",
         margin: "0", // No margin
