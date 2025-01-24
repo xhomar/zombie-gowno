@@ -1,7 +1,7 @@
 
 let popSound;
 let currentPickedColor;
-let currentColor;
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 } // waiting function
@@ -31,7 +31,7 @@ $(document).ready(function () {
    const colors = $(".colorsChild");
    const soundLevel = document.getElementById("soundLevel");
    popSound = document.getElementById("popSound");
-
+   let currentColor;
    let isHeld = false;
    let colorChanged = false;
    let prevColor = "eColor";
