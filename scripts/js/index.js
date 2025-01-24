@@ -95,7 +95,7 @@ colors.on("click", function(){
 
   // clicking start button -> sends to game.html
   start.on("click", function () {
-    window.location.href = "../html/game.html"; // goes to game.html
+    window.location.href = "scripts/html/game.html"; // goes to game.html
   });
 
   // clicking volume icon -> depending on what the volume is it changes the volume to 0 or to the previous volume
