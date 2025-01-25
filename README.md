@@ -1,5 +1,10 @@
 # zombie-gowno
-marijo i dave robi gre 
+
+
+[NACIŚNIJ TUTAJ, ABY ZAGRAĆ W ZOMBIE GOWNO](https://xhomar.github.io/zombie-gowno/scripts/html/index.html)
+
+
+marijo i dave robi gre
 
 gameplay:
 - koles ze strzelba (jednak telepatycznie strzela bo jest nacpany)
@@ -16,28 +21,27 @@ gosc jest po narkotykach, tak? koniec
 
 toDo list std::
 
-(1.mapa
--las)
+1. mapa
+- las
 ![konceptart](https://github.com/xhomar/zombie-gowno/blob/main/mapa_concept_art.png?raw=true)
 
 
-(2.gracz)
-(-kamera śledząca gracza) NIEZROBIONE
-(-bronie dużoNIEZROBIONE
-*shotgunNIEZROBIONE
-*ak-49NIEZROBIONE
-*katanaNIEZROBIONE
-*deagleNIEZROBIONE
-*snajperkaNIEZROBIONE
-*granat launcherNIEZROBIONE)
+2. gracz
+- kamera śledząca gracza NIEZROBIONE
+- bronie dużoNIEZROBIONE
+    - shotgunNIEZROBIONE
+    - ak-49NIEZROBIONE
+    - katanaNIEZROBIONE
+    - deagleNIEZROBIONE
+    - snajperkaNIEZROBIONE
+    - granat launcherNIEZROBIONE
 
 
-
-(3.zombie
--tankNIEZROBIONE
--strzelający debilNIEZROBIONE
--bezmyślny debil OK
--speedy boi OK
--Mariusz Kwiatkowski OK)
+3. zombie
+- tankNIEZROBIONE
+- strzelający debilNIEZROBIONE
+- bezmyślny debil OK
+- speedy boi OK
+- Mariusz Kwiatkowski OK
 
 w sumie jest tylko jeden typ zombie ale 3 typy zombie sie zaliczaja w jedem tak?
